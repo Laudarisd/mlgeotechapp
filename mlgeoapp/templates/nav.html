@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+
+<style>
+/* style.css */
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #ebf1f6;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  max-height: 40px;
+  margin-right: 10px; /* Adjust the margin as needed */
+  border-radius: 50%;
+}
+
+nav a {
+  color: #000000;
+}
+
+.wrapper {
+  display: flex;
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav>
+      <div class="logo-container">
+        <img src="{% static 'img/1.jpeg' %}" alt="Logo">
+      </div>
+      <ul>
+        <li><a href="#">page 1</a></li>
+        <li><a href="#">page 2</a></li>
+        <li><a href="#">page 3</a></li>
+        <li><a href="#">page 4</a></li>
+        <li><a href="#">page 5</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </nav>
+</div>
+{% endblock %}
