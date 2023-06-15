@@ -5,12 +5,12 @@ from . import login_reg_logout
 
 
 urlpatterns = [
-    path('', views.homeView, name='root'),  # Add this line for the root path
-    path('nav/', views.navBar, name='nav'),
-    path('home/', views.homeView, name='homeview'),
+    path('', views.navBar, name='nav'),
+    path('plot-csv/', views.plotCSV, name='plotCSV'),
+    
 
-    #path('', login_reg_logout.login, name='login'),
-    #path('', login_reg_logout.register, name='register'),
-    #path('', login_reg_logout.logout, name='logout'),
+    # path('', login_reg_logout.login, name='login'),
+    # path('', login_reg_logout.register, name='register'),
+    # path('', login_reg_logout.logout, name='logout'),
 
 ]
